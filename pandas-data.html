@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تحليل البيانات باستخدام Pandas - CodeVerse</title>
+  <meta name="description" content="تعرف على أساسيات Pandas لتحليل البيانات وتنظيفها وتجهيزها للعرض والتقارير." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" class="icon-link" aria-label="المفضلة">❤️<span class="sr-only">المفضلة</span></a>
+        <a href="cart.html" class="icon-link" aria-label="السلة">🛒<span class="sr-only">السلة</span></a>
+        <a href="profile.html" class="icon-link" aria-label="الملف الشخصي">👤<span class="sr-only">الملف الشخصي</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="blog-container" aria-labelledby="post-heading">
+    <div class="blog-header">
+      <h1 id="post-heading">مقدمة عن تحليل البيانات باستخدام Pandas</h1>
+      <p class="section-subtitle">تعلم كيفية معالجة وتحليل البيانات الكبيرة باستخدام مكتبة Pandas لتنظيم النتائج بسرعة.</p>
+      <div class="article-meta">
+        <div class="blog-author">
+          <div class="author-avatar">أ</div>
+          <span>أحمد علي</span>
+        </div>
+        <span>قراءة: 7 دقائق</span>
+        <span>تاريخ: 18 سبتمبر 2025</span>
+      </div>
+    </div>
+
+    <article class="article-content">
+      <p>Pandas هي مكتبة Python قوية لتحليل البيانات. تستخدم هيكلين رئيسيين هما DataFrame و Series، وهما يوفران طرقاً فعّالة لمعالجة البيانات.</p>
+
+      <h2>هيكل البيانات: DataFrame و Series</h2>
+      <p>Series هو مصفوفة بعنوان واحد، بينما DataFrame هو جدول ثنائي الأبعاد يحتوي على عدة أعمدة وصفوف. معظم عمليات Pandas تتم على DataFrames.</p>
+
+      <h2>قراءة البيانات</h2>
+      <p>استخدم read_csv أو read_excel أو read_json لاستيراد البيانات من ملفات مختلفة. Pandas يتعامل مع معظم صيغ الملفات الشهيرة بسهولة.</p>
+
+      <h2>الفحص والاستكشاف</h2>
+      <p>استخدم head() و tail() و info() و describe() لفهم بيانات الجدول. هذه الدوال توفر نظرة عامة سريعة على البيانات.</p>
+
+      <h2>التصفية والتحويل</h2>
+      <p>يمكنك استخدام الفلاتر والتجميع وتحويل الأعمدة لتنظيف البيانات بسرعة. loc و iloc يساعدان على الوصول إلى البيانات بطرق مختلفة.</p>
+
+      <h2>التجميع والتجمع</h2>
+      <p>استخدم groupby لتجميع البيانات حسب فئات معينة، ثم طبّق دوال مثل sum() و mean() و count() للحصول على ملخصات.</p>
+
+      <ul>
+        <li>ابدأ بقراءة البيانات بشكل صحيح.</li>
+        <li>افحص البيانات الناقصة والقيم الشاذة.</li>
+        <li>نظّف البيانات وتخلص من الأخطاء.</li>
+        <li>حلّل البيانات وانشئ تقارير.</li>
+        <li>صدّر النتائج بصيغ مختلفة.</li>
+      </ul>
+
+      <h2>التصدير والمشاركة</h2>
+      <p>بعد المعالجة، صَدّر النتائج إلى CSV أو Excel أو JSON لعرضها أو مشاركتها مع الآخرين.</p>
+    </article>
+
+    <a class="blog-back" href="blog.html">← العودة إلى المدونة</a>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

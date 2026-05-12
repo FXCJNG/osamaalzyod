@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10 أخطاء شائعة في Python - CodeVerse</title>
+  <meta name="description" content="اقرأ المقال الكامل عن الأخطاء الشائعة في Python وكيفية تجنبها لتسريع تعلمك وتحسين جودة الكود." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" class="icon-link" aria-label="المفضلة">❤️<span class="sr-only">المفضلة</span></a>
+        <a href="cart.html" class="icon-link" aria-label="السلة">🛒<span class="sr-only">السلة</span></a>
+        <a href="profile.html" class="icon-link" aria-label="الملف الشخصي">👤<span class="sr-only">الملف الشخصي</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="blog-container" aria-labelledby="post-heading">
+    <div class="blog-header">
+      <h1 id="post-heading">جارٍ تحميل المقال...</h1>
+      <p class="section-subtitle" id="postSubtitle">انتظر لحظة حتى يتم عرض محتوى المقال.</p>
+      <div class="article-meta" id="postMeta">
+        <div class="blog-author">
+          <div class="author-avatar" id="postAuthorAvatar">أ</div>
+          <span id="postAuthorName">CodeVerse</span>
+        </div>
+        <span id="postReadTime">قراءة...</span>
+        <span id="postDate">تاريخ...</span>
+      </div>
+    </div>
+
+    <article class="article-content" id="postContent">
+      <p>جارٍ تحميل المحتوى. إذا لم يتم تحميل المقال، تأكد من فتح الصفحة عبر رابط صحيح من صفحة المدونة.</p>
+    </article>
+
+    <div id="postError" class="blog-empty" hidden>المقال غير موجود. <a href="blog.html">العودة إلى المدونة</a></div>
+
+    <a class="blog-back" href="blog.html">← العودة إلى المدونة</a>
+  </main>
+
+  <script>
+    const articles = {
+      'python-mistakes': {
+        title: '10 أخطاء شائعة يرتكبها المبتدئون في Python',
+        subtitle: 'دليل عملي لتجنب الأخطاء الأساسية وزيادة إنتاجيتك في بناء تطبيقات Python.',
+        author: 'أحمد علي',
+        authorAvatar: 'أ',
+        readTime: '5 دقائق',
+        date: '12 مايو 2025',
+        category: 'Python',
+        metaDescription: 'اقرأ المقال الكامل عن الأخطاء الشائعة في Python وكيفية تجنبها لتسريع تعلمك وتحسين جودة الكود.',
+        sections: [
+          { type: 'paragraph', text: 'عندما تبدأ برمجة Python، قد يبدو الأمر سهلاً، لكن هناك مجموعة من الأخطاء المتكررة التي تبطئ التقدم وتؤثر على جودة الكود. في هذا المقال نستعرض هذه الأخطاء ونقدم لك طرقاً بسيطة لتجنبها.' },
+          { type: 'heading', text: '1. استخدام المتغيرات بدون أسماء واضحة' },
+          { type: 'paragraph', text: 'عناوين المتغيرات الواضحة تساعدك في قراءة الكود لاحقاً وتسهّل عليك تعديل البرنامج. اختر أسماء قصيرة لكنها معبرة بدلاً من a أو x.' },
+          { type: 'heading', text: '2. تجاهل فحص الأخطاء Exceptions' },
+          { type: 'paragraph', text: 'البرمجة بدون معالجة الأخطاء يمكن أن تجعل التطبيق يتوقف فجأة. استخدم try/except لحماية أجزاء من الكود التي قد تفشل.' },
+          { type: 'heading', text: '3. إعادة كتابة الكود بدل استخدام الدوال' },
+          { type: 'paragraph', text: 'إذا كنت تكرر نفس التعليمات البرمجية في عدة أماكن، امنع ذلك باستخدام دوال وظيفية. هذا يجعل الكود أنظف وأسهل للاختبار والصيانة.' },
+          { type: 'list', items: ['استخدم دالة لكل مهمة واضحة.', 'اجعل كل دالة تقوم بشيء واحد فقط.', 'اعتمد على الباراميترات بدلاً من المتغيرات العامة.'] },
+          { type: 'heading', text: '4. عدم اختبار الكود مبكراً' },
+          { type: 'paragraph', text: 'ابدأ بالاختبار من المراحل الأولى. حتى لو كان الكود صغيراً، فإن اختبار الوظائف الأساسية يوفر عليك وقتاً كبيراً في المستقبل.' },
+          { type: 'heading', text: '5. تجاهل تنسيق الكود PEP8' },
+          { type: 'paragraph', text: 'تنسيق الكود يجعل ملفك أسهل للقراءة. استخدم أدوات مثل black أو flake8 للتأكد من أن الكود مرتب.' }
+        ]
+      },
+      'react-hooks': {
+        title: 'شرح Hooks في React وكيفية استخدامها',
+        subtitle: 'تعرف على مفهوم Hooks وأمثلة عملية لبناء مكونات تفاعلية أكثر تنظيماً.',
+        author: 'ليلى إبراهيم',
+        authorAvatar: 'ل',
+        readTime: '8 دقائق',
+        date: '20 يونيو 2025',
+        category: 'React',
+        metaDescription: 'تعرف على React Hooks وكيف تستخدمها لبناء تطبيقات تفاعلية وأسهل للصيانة.',
+        sections: [
+          { type: 'paragraph', text: 'React Hooks غيرت طريقة كتابة المكونات، وجعلت استخدام الحالة والتأثيرات داخل المكونات الوظيفية أمراً مباشراً.' },
+          { type: 'heading', text: 'ما هي Hooks؟' },
+          { type: 'paragraph', text: 'Hooks هي وظائف في React تسمح لك باستخدام الحالة وميزات أخرى دون كتابة مكونات فئة.' },
+          { type: 'heading', text: 'useState و useEffect' },
+          { type: 'paragraph', text: 'استخدم useState لإدارة الحالة المحلية، وuseEffect لتشغيل الأكواد عند التحميل أو تحديث القيم.' },
+          { type: 'heading', text: 'متى تختار Hook؟' },
+          { type: 'paragraph', text: 'إذا كان لديك منطق حالة يمكن إعادة استخدامه أو تأثير يعتمد على تغييرات البيانات، ففكر في إنشاء Hook مخصص.' }
+        ]
+      },
+      'cyber-security': {
+        title: 'أساسيات الأمن السيبراني لكل مطور',
+        subtitle: 'الممارسات الأساسية لحماية تطبيقاتك وبيانات المستخدمين من المخاطر الشائعة.',
+        author: 'محمد صالح',
+        authorAvatar: 'م',
+        readTime: '10 دقائق',
+        date: '28 يوليو 2025',
+        category: 'الأمان',
+        metaDescription: 'اكتشف أفضل ممارسات الأمن السيبراني للمطورين، من التحقق من المدخلات إلى التشفير وحماية البيانات.',
+        sections: [
+          { type: 'paragraph', text: 'الأمن السيبراني ليس وظيفة فريق واحد فقط، بل هو جزء من عملية تطوير التطبيق بالكامل.' },
+          { type: 'heading', text: 'التحقق من المدخلات' },
+          { type: 'paragraph', text: 'تحقق دائماً من البيانات الواردة من المستخدم، ولا تعتمد على القيم التي تصل من المتصفح فقط.' },
+          { type: 'heading', text: 'التشفير وإدارة المفاتيح' },
+          { type: 'paragraph', text: 'استخدم بروتوكولات HTTPS وخزن المفاتيح بشكل آمن خارج الكود المصدري.' },
+          { type: 'heading', text: 'التحديثات الدورية' },
+          { type: 'paragraph', text: 'حدّث المكتبات والإطار الخاص بك بانتظام لتجنب الثغرات المعروفة.' }
+        ]
+      },
+      'uiux-principles': {
+        title: 'مبادئ تصميم الواجهات الجميلة والفعالة',
+        subtitle: 'أفضل الممارسات لتصميم واجهات تستخدمها أفضل تجارب المستخدم وتؤدي مهامهم بسرعة.',
+        author: 'فاطمة محمود',
+        authorAvatar: 'ف',
+        readTime: '6 دقائق',
+        date: '4 أغسطس 2025',
+        category: 'التصميم',
+        metaDescription: 'تعلّم مبادئ تصميم الواجهات الجيدة والتركيز على تجربة المستخدم وسهولة الاستخدام.',
+        sections: [
+          { type: 'paragraph', text: 'الواجهة الجيدة تجعل المستخدم يشعر بأنه يتحكم، وتساعده على إنجاز مهامه بثقة.' },
+          { type: 'heading', text: 'التسلسل البصري' },
+          { type: 'paragraph', text: 'رتب المعلومات من الأهم إلى الأقل أهمية، واستخدم أحجام خطوط وألوان واضحة.' },
+          { type: 'heading', text: 'التجاوب وسهولة الاستخدام' },
+          { type: 'paragraph', text: 'تأكد من أن التصميم يعمل بشكل جيد على الشاشة الكبيرة والصغيرة.' },
+          { type: 'heading', text: 'الاستمرارية' },
+          { type: 'paragraph', text: 'سجّل الأنماط واستخدم عناصر متجانسة عبر التطبيق لتجنب التشويش.' }
+        ]
+      },
+      'pandas-data': {
+        title: 'مقدمة عن تحليل البيانات باستخدام Pandas',
+        subtitle: 'كيف تبدأ في معالجة البيانات بسرعة باستخدام مكتبة Pandas في Python.',
+        author: 'أحمد علي',
+        authorAvatar: 'أ',
+        readTime: '7 دقائق',
+        date: '18 سبتمبر 2025',
+        category: 'البيانات',
+        metaDescription: 'تعرف على أساسيات Pandas لتحليل البيانات وتنظيفها وتجهيزها للعرض والتقارير.',
+        sections: [
+          { type: 'paragraph', text: 'Pandas هي مكتبة Python قوية لتحليل البيانات، وتستخدم هيكلين رئيسيين هما DataFrame وSeries.' },
+          { type: 'heading', text: 'قراءة البيانات' },
+          { type: 'paragraph', text: 'استخدم read_csv أو read_excel لاستيراد البيانات إلى DataFrame بسهولة.' },
+          { type: 'heading', text: 'التصفية والتحويل' },
+          { type: 'paragraph', text: 'يمكنك استخدام الفلاتر والتجميع وتحويل الأعمدة لتنظيف البيانات بسرعة.' },
+          { type: 'heading', text: 'التصدير والمشاركة' },
+          { type: 'paragraph', text: 'بعد المعالجة، صَدّر النتائج إلى CSV أو Excel أو JSON لعرضها أو مشاركتها.' }
+        ]
+      },
+      'aws-deployment': {
+        title: 'نشر التطبيقات على AWS خطوة بخطوة',
+        subtitle: 'دليل مبسّط لإطلاق تطبيقك على السحابة باستخدام خدمات AWS الأساسية.',
+        author: 'محمد صالح',
+        authorAvatar: 'م',
+        readTime: '12 دقائق',
+        date: '30 أكتوبر 2025',
+        category: 'DevOps',
+        metaDescription: 'تعرف على خطوات نشر التطبيق على AWS من إعداد البيئة إلى تتبع الأداء بعد الإطلاق.',
+        sections: [
+          { type: 'paragraph', text: 'AWS توفر خدمات مرنة لنشر التطبيقات، سواء كنت تحتاج إلى موقع بسيط أو تطبيق معقد.' },
+          { type: 'heading', text: 'اختيار الخدمة المناسبة' },
+          { type: 'paragraph', text: 'ابدأ بـ EC2 أو Elastic Beanstalk أو AWS Lambda بناءً على نوع التطبيق وحجم المستخدمين.' },
+          { type: 'heading', text: 'إعداد البيئة' },
+          { type: 'paragraph', text: 'تعرّف على إعداد الشبكات وتخزين البيانات وكيفية ربط النطاق domain بالتطبيق.' },
+          { type: 'heading', text: 'المراقبة والصيانة' },
+          { type: 'paragraph', text: 'استخدم CloudWatch لمراقبة الأداء والاستجابة السريعة لأي أخطاء أو انقطاع.' }
+        ]
+      }
+    };
+
+    const getParam = name => {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    };
+
+    const renderSection = section => {
+      if (section.type === 'paragraph') {
+        return `<p>${section.text}</p>`;
+      }
+      if (section.type === 'heading') {
+        return `<h2>${section.text}</h2>`;
+      }
+      if (section.type === 'list') {
+        return `<ul>${section.items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+      }
+      return '';
+    };
+
+    const renderArticle = article => {
+      document.title = `${article.title} - CodeVerse`;
+      document.querySelector('meta[name="description"]').setAttribute('content', article.metaDescription);
+      document.getElementById('post-heading').textContent = article.title;
+      document.getElementById('postSubtitle').textContent = article.subtitle;
+      document.getElementById('postAuthorAvatar').textContent = article.authorAvatar;
+      document.getElementById('postAuthorName').textContent = article.author;
+      document.getElementById('postReadTime').textContent = article.readTime;
+      document.getElementById('postDate').textContent = article.date;
+      document.getElementById('postContent').innerHTML = article.sections.map(renderSection).join('');
+      document.getElementById('postError').hidden = true;
+    };
+
+    const id = getParam('id') || 'python-mistakes';
+    const article = articles[id];
+
+    if (article) {
+      renderArticle(article);
+    } else {
+      document.getElementById('postContent').innerHTML = '';
+      document.getElementById('postError').hidden = false;
+      document.getElementById('postMeta').style.display = 'none';
+      document.getElementById('post-heading').textContent = 'المقال غير موجود';
+      document.getElementById('postSubtitle').textContent = 'يرجى العودة إلى صفحة المدونة واختيار مقالة متاحة.';
+    }
+  </script>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

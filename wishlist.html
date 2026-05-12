@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المفضلة - CodeVerse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .wishlist-container {
+      max-width: 1200px;
+      margin: 100px auto 0;
+      padding: 40px 24px;
+      min-height: 60vh;
+    }
+
+    .wishlist-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .wishlist-header h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--text-primary);
+    }
+
+    .wishlist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .wishlist-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: all var(--transition);
+      position: relative;
+    }
+
+    .wishlist-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .remove-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #fee;
+      border: none;
+      color: #c33;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all var(--transition);
+    }
+
+    .remove-btn:hover {
+      background: #c33;
+      color: white;
+    }
+
+    .wishlist-title {
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      margin-top: 8px;
+    }
+
+    .wishlist-price {
+      font-size: 1.3rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+
+    .wishlist-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .wishlist-actions button {
+      flex: 1;
+      padding: 10px;
+      border-radius: 50px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all var(--transition);
+    }
+
+    .add-to-cart {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+    }
+
+    .add-to-cart:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px var(--accent-glow);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .empty-state-icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+
+    .empty-state p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .back-btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px var(--accent-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" style="text-decoration: none; color: var(--accent); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition); background: var(--accent-glow);">❤️</a>
+        <a href="cart.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">🛒</a>
+        <a href="profile.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- WISHLIST SECTION -->
+  <section class="wishlist-container">
+    <div class="wishlist-header">
+      <h2>❤️ المفضلة</h2>
+    </div>
+
+    <div class="wishlist-grid" id="wishlistGrid">
+      <div class="wishlist-card">
+        <button class="remove-btn">✕</button>
+        <div class="wishlist-title">Python من الصفر</div>
+        <div class="wishlist-price">$49</div>
+        <div class="wishlist-actions">
+          <button class="add-to-cart">أضف للسلة 🛒</button>
+        </div>
+      </div>
+
+      <div class="wishlist-card">
+        <button class="remove-btn">✕</button>
+        <div class="wishlist-title">React & Full Stack</div>
+        <div class="wishlist-price">$69</div>
+        <div class="wishlist-actions">
+          <button class="add-to-cart">أضف للسلة 🛒</button>
+        </div>
+      </div>
+
+      <div class="wishlist-card">
+        <button class="remove-btn">✕</button>
+        <div class="wishlist-title">تصميم الويب (UI/UX)</div>
+        <div class="wishlist-price">$44</div>
+        <div class="wishlist-actions">
+          <button class="add-to-cart">أضف للسلة 🛒</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

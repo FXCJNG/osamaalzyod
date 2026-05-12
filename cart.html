@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سلة التسوق - CodeVerse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .cart-container {
+      max-width: 1000px;
+      margin: 100px auto 0;
+      padding: 40px 24px;
+    }
+
+    .cart-header { text-align: center; margin-bottom: 40px; }
+    .cart-header h2 { font-size: 2rem; font-weight: 900; color: var(--text-primary); }
+
+    .cart-items {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+      transition: all var(--transition);
+    }
+
+    .cart-item:hover { background: var(--bg); }
+    .cart-item:last-child { border-bottom: none; }
+
+    .item-info { flex: 1; }
+    .item-title { font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+    .item-desc { font-size: 0.85rem; color: var(--text-muted); }
+
+    .item-price { font-size: 1.2rem; font-weight: 900; color: var(--accent); margin: 0 30px; min-width: 80px; text-align: center; }
+
+    .remove-item-btn {
+      background: #fee;
+      border: none;
+      color: #c33;
+      padding: 8px 12px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .remove-item-btn:hover { background: #c33; color: white; }
+
+    .cart-summary {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius);
+      padding: 30px;
+      max-width: 400px;
+      margin-right: auto;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+    }
+
+    .summary-row.total {
+      border-top: 2px solid var(--border);
+      padding-top: 12px;
+      margin-top: 12px;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .coupon-section {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .coupon-input {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .coupon-input input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg);
+      color: var(--text-primary);
+    }
+
+    .coupon-input button {
+      padding: 10px 20px;
+      background: var(--accent-2);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+      box-shadow: 0 6px 24px var(--accent-glow);
+    }
+
+    .checkout-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px var(--accent-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">❤️</a>
+        <a href="cart.html" style="text-decoration: none; color: var(--accent); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition); background: var(--accent-glow);">🛒</a>
+        <a href="profile.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CART SECTION -->
+  <section class="cart-container">
+    <div class="cart-header">
+      <h2>🛒 سلة التسوق</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 400px; gap: 30px;">
+      <div class="cart-items">
+        <div class="cart-item">
+          <div class="item-info">
+            <div class="item-title">Python من الصفر</div>
+            <div class="item-desc">40 ساعة | 120 درس</div>
+          </div>
+          <div class="item-price">$49</div>
+          <button class="remove-item-btn">إزالة</button>
+        </div>
+
+        <div class="cart-item">
+          <div class="item-info">
+            <div class="item-title">React & Full Stack</div>
+            <div class="item-desc">60 ساعة | 180 درس</div>
+          </div>
+          <div class="item-price">$69</div>
+          <button class="remove-item-btn">إزالة</button>
+        </div>
+
+        <div class="cart-item">
+          <div class="item-info">
+            <div class="item-title">تصميم الويب (UI/UX)</div>
+            <div class="item-desc">35 ساعة | 105 درس</div>
+          </div>
+          <div class="item-price">$44</div>
+          <button class="remove-item-btn">إزالة</button>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <h3 style="margin-bottom: 20px; font-weight: 900; color: var(--text-primary);">الملخص</h3>
+
+        <div class="coupon-section">
+          <label style="font-size: 0.9rem; font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 8px;">كود خصم</label>
+          <div class="coupon-input">
+            <input type="text" placeholder="أدخل الكود" />
+            <button>تطبيق</button>
+          </div>
+        </div>
+
+        <div class="summary-row">
+          <span>السعر الأساسي</span>
+          <span>$162</span>
+        </div>
+        <div class="summary-row">
+          <span>الخصم</span>
+          <span style="color: var(--accent);">-$0</span>
+        </div>
+        <div class="summary-row total">
+          <span>الإجمالي</span>
+          <span>$162</span>
+        </div>
+
+        <button class="checkout-btn">الدفع الآن</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

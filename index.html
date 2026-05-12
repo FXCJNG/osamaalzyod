@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeVerse | منصة الدورات البرمجية</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active-link">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="faq.html">الأسئلة</a></li>
+        <li><a href="instructors.html">المدرسون</a></li>
+        <li><a href="blog.html">المدونة</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="login.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">دخول</a>
+        <button class="nav-cta">ابدأ مجاناً</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        أكثر من ٥٠,٠٠٠ مبرمج بدأوا هنا
+      </div>
+      <h1 class="hero-title">
+        تعلّم البرمجة<br />
+        <span class="hero-highlight">بأسلوب المستقبل</span>
+      </h1>
+      <p class="hero-desc">
+        دورات تفاعلية باللغة العربية تأخذك من الصفر إلى الاحتراف.
+        تعلّم، طبّق، واحصل على شهادة معتمدة.
+      </p>
+      <div class="hero-actions">
+        <a href="#courses" class="btn-primary">
+          استكشف الدورات
+          <span class="btn-arrow">←</span>
+        </a>
+        <a href="#features" class="btn-ghost">شاهد كيف يعمل</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">+200</span>
+          <span class="stat-label">دورة تعليمية</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">+50K</span>
+          <span class="stat-label">طالب نشط</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">٩٨٪</span>
+          <span class="stat-label">نسبة الرضا</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="window-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="window-title">main.py</span>
+        </div>
+        <pre class="code-block"><code><span class="kw">def</span> <span class="fn">start_journey</span>():
+    name = <span class="str">"طالب مجتهد"</span>
+    skills = []
+
+    courses = [
+        <span class="str">"Python"</span>,
+        <span class="str">"JavaScript"</span>,
+        <span class="str">"React"</span>,
+        <span class="str">"AI &amp; ML"</span>,
+    ]
+
+    <span class="kw">for</span> course <span class="kw">in</span> courses:
+        skills.append(course)
+        <span class="fn">print</span>(<span class="str">f"✅ تعلّمت {course}"</span>)
+
+    <span class="kw">return</span> <span class="str">"مطوّر محترف 🚀"</span>
+
+start_journey()</code></pre>
+        <div class="terminal-output">
+          <span class="term-line">✅ تعلّمت Python</span>
+          <span class="term-line">✅ تعلّمت JavaScript</span>
+          <span class="term-line blink-cursor">▌</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

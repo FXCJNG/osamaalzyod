@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شهاداتي - CodeVerse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .certificates-container {
+      max-width: 1000px;
+      margin: 100px auto 0;
+      padding: 40px 24px;
+      min-height: 60vh;
+    }
+
+    .certificates-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .certificates-header h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    .certificate-card {
+      background: white;
+      border: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 212, 170, 0.15);
+      position: relative;
+      transition: all var(--transition);
+    }
+
+    .certificate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 60px rgba(0, 212, 170, 0.25);
+    }
+
+    .certificate-badge {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .certificate-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .certificate-subtitle {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .certificate-info {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .certificate-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .certificate-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .cert-btn {
+      flex: 1;
+      padding: 10px;
+      border-radius: 50px;
+      border: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .download-btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px var(--accent-glow);
+    }
+
+    .share-btn {
+      background: var(--bg);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+
+    .share-btn:hover {
+      background: var(--accent-glow);
+      border-color: var(--accent);
+    }
+
+    .dark-mode .certificate-card {
+      background: var(--bg-card);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">❤️</a>
+        <a href="cart.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">🛒</a>
+        <a href="profile.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CERTIFICATES SECTION -->
+  <section class="certificates-container">
+    <div class="certificates-header">
+      <h2>🏆 شهاداتي</h2>
+      <p style="color: var(--text-secondary); font-size: 1.05rem; margin-top: 12px;">شهاداتك المعتمدة والقابلة للمشاركة</p>
+    </div>
+
+    <div class="certificates-grid">
+      <div class="certificate-card">
+        <div class="certificate-badge">🐍</div>
+        <div class="certificate-title">PYTHON</div>
+        <div class="certificate-subtitle">Python من الصفر</div>
+        <div class="certificate-info">
+          شهادة إكمال بنجاح دورة Python المكثفة<br/>
+          مع تقدير امتياز
+        </div>
+        <div class="certificate-date">الحصول عليها: 15 مايو 2026</div>
+        <div class="certificate-actions">
+          <button class="cert-btn download-btn">⬇️ تحميل</button>
+          <button class="cert-btn share-btn">🔗 مشاركة</button>
+        </div>
+      </div>
+
+      <div class="certificate-card">
+        <div class="certificate-badge">⚛️</div>
+        <div class="certificate-title">REACT</div>
+        <div class="certificate-subtitle">React & Full Stack</div>
+        <div class="certificate-info">
+          شهادة إكمال بنجاح دورة React<br/>
+          المتقدمة والتطوير الكامل
+        </div>
+        <div class="certificate-date">الحصول عليها: 10 إبريل 2026</div>
+        <div class="certificate-actions">
+          <button class="cert-btn download-btn">⬇️ تحميل</button>
+          <button class="cert-btn share-btn">🔗 مشاركة</button>
+        </div>
+      </div>
+
+      <div class="certificate-card">
+        <div class="certificate-badge">🎨</div>
+        <div class="certificate-title">UI/UX</div>
+        <div class="certificate-subtitle">تصميم الويب والتجربة</div>
+        <div class="certificate-info">
+          شهادة إكمال دورة التصميم<br/>
+          واجهات المستخدم والتجربة
+        </div>
+        <div class="certificate-date">الحصول عليها: 20 مارس 2026</div>
+        <div class="certificate-actions">
+          <button class="cert-btn download-btn">⬇️ تحميل</button>
+          <button class="cert-btn share-btn">🔗 مشاركة</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.querySelectorAll('.download-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        showToast('يتم تحميل الشهادة... تم! ✅');
+      });
+    });
+
+    document.querySelectorAll('.share-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        showToast('تم نسخ رابط المشاركة 🔗');
+      });
+    });
+  </script>
+</body>
+</html>

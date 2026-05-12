@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نشر التطبيقات على AWS - OSAMA(IT)</title>
+  <meta name="description" content="تعرف على خطوات نشر التطبيق على AWS من إعداد البيئة إلى تتبع الأداء بعد الإطلاق." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">OSAMA(IT)</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero" data-translate="الرئيسية">الرئيسية</a></li>
+        <li><a href="courses.html" data-translate="الدورات">الدورات</a></li>
+        <li><a href="features.html" data-translate="المميزات">المميزات</a></li>
+        <li><a href="contact.html" data-translate="تواصل معنا">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3c0 .33.02.65.06.97A7 7 0 0021 12.79z" />
+          </svg>
+        </button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+      <a href="wishlist.html" class="icon-link" aria-label="المفضلة" data-translate="المفضلة">
+        <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+        <span class="sr-only" data-translate="المفضلة">المفضلة</span>
+      </a>
+      <a href="cart.html" class="icon-link" aria-label="السلة" data-translate="السلة">
+        <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 18a2 2 0 100 4 2 2 0 000-4zm10 0a2 2 0 100 4 2 2 0 000-4zm2.83-6.25l-1.6 4.43A2 2 0 0016.3 18H7.28l-.79-4H19a1 1 0 00.83-1.52zM6 6h15v2H6V6z" />
+        </svg>
+        <span class="sr-only" data-translate="السلة">السلة</span>
+      </a>
+      <a href="profile.html" class="icon-link" aria-label="الملف الشخصي" data-translate="الملف الشخصي">
+        <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 12a5 5 0 100-10 5 5 0 000 10zm7 9a7 7 0 00-14 0h14z" />
+        </svg>
+        <span class="sr-only" data-translate="الملف الشخصي">الملف الشخصي</span>
+      </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="blog-container" aria-labelledby="post-heading">
+    <div class="blog-header">
+      <h1 id="post-heading">نشر التطبيقات على AWS خطوة بخطوة</h1>
+      <p class="section-subtitle">دليل شامل لنشر تطبيقاتك على AWS مع أفضل الممارسات وإعداد البنية السحابية.</p>
+      <div class="article-meta">
+        <div class="blog-author">
+          <div class="author-avatar">م</div>
+          <span>محمد صالح</span>
+        </div>
+        <span>قراءة: 12 دقائق</span>
+        <span>تاريخ: 30 أكتوبر 2025</span>
+      </div>
+    </div>
+
+    <article class="article-content">
+      <p>AWS توفر خدمات مرنة لنشر التطبيقات، سواء كنت تحتاج إلى موقع بسيط أو تطبيق معقد مع ملايين المستخدمين.</p>
+
+      <h2>اختيار الخدمة المناسبة</h2>
+      <p>AWS توفر عدة خيارات للنشر. EC2 توفر مراقبة كاملة للخادم، Elastic Beanstalk توفر بيئة مُدارة، و Lambda مثالية للتطبيقات بدون خادم.</p>
+
+      <h2>إعداد البيئة الأساسية</h2>
+      <p>ابدأ بإنشاء حساب AWS. ثم اختر المنطقة الجغرافية المناسبة لتقليل الكمون. اختر نوع الخادم الذي يناسب احتياجاتك.</p>
+
+      <h2>إعداد الشبكات والأمان</h2>
+      <p>اضبط VPC والمجموعات الأمنية. تأكد من أن فقط المنافذ المطلوبة مفتوحة. استخدم HTTPS دائماً وجدران الحماية.</p>
+
+      <h2>تخزين البيانات</h2>
+      <p>استخدم RDS للقواعد البيانات العلاقية، DynamoDB للبيانات NoSQL، و S3 لتخزين الملفات. اختر النوع المناسب لاحتياجاتك.</p>
+
+      <h2>النشر والتحديثات</h2>
+      <p>استخدم CodeDeploy أو CodePipeline لأتمتة عملية النشر. هذا يسمح لك بنشر تحديثات بسرعة وأمان.</p>
+
+      <h2>المراقبة والتتبع</h2>
+      <p>استخدم CloudWatch لمراقبة الأداء والأخطاء. اضبط المنبهات للتنويه عند حدوث مشاكل.</p>
+
+      <ul>
+        <li>اختر الخدمة المناسبة لاحتياجاتك.</li>
+        <li>اضبط الأمان والشبكات بشكل صحيح.</li>
+        <li>استخدم Auto Scaling للتعامل مع الحمل.</li>
+        <li>طبّق النسخ الاحتياطية والاستعادة.</li>
+        <li>راقب الأداء بانتظام.</li>
+      </ul>
+
+      <h2>الخلاصة</h2>
+      <p>نشر التطبيقات على AWS ليس صعباً طالما تتبعت الممارسات الأفضل. ابدأ بسيط وأضف ميزات حسب احتياجاتك.</p>
+    </article>
+
+    <a class="blog-back" href="blog.html">← العودة إلى المدونة</a>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">OSAMA(IT)</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 OSAMA(IT). جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

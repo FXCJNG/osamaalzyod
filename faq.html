@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الأسئلة الشائعة - CodeVerse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .faq-container {
+      max-width: 900px;
+      margin: 100px auto 0;
+      padding: 40px 24px;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .faq-header h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .faq-header p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-question {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      color: var(--text-primary);
+      user-select: none;
+      transition: all var(--transition);
+    }
+
+    .faq-question:hover {
+      background: var(--bg);
+    }
+
+    .faq-toggle {
+      font-size: 1.5rem;
+      transition: transform var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .faq-search {
+      margin-bottom: 40px;
+    }
+
+    .faq-search input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      font-size: 1rem;
+      transition: all var(--transition);
+    }
+
+    .faq-search input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">❤️</a>
+        <a href="cart.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">🛒</a>
+        <a href="profile.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-container">
+    <div class="faq-header">
+      <h2>❓ الأسئلة الشائعة</h2>
+      <p>إجابات سريعة على أسئلتك الشائعة</p>
+    </div>
+
+    <div class="faq-search">
+      <input type="text" placeholder="ابحث عن سؤال..." id="faqSearch" />
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>كيف يمكنني التسجيل في دورة؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        يمكنك التسجيل من خلال الضغط على زر "سجّل الآن" أسفل أي دورة. ملء بيانات التسجيل والدفع عبر بطاقتك الائتمانية أو محفظتك الرقمية.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>هل يمكن استرجاع المبلغ بعد التسجيل؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        نعم، يمكنك استرجاع المبلغ كاملاً خلال 30 يوم من التسجيل إذا لم تكمل أكثر من 5% من الدورة.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>هل يوجد شهادات بعد إكمال الدورة؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        نعم! بعد إكمال جميع دروس الدورة والامتحان النهائي بنجاح، ستحصل على شهادة رقمية معتمدة من CodeVerse.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>كم مدة الوصول للمواد بعد التسجيل؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        لديك وصول دائم ومدى الحياة لجميع مواد الدورة. يمكنك العودة والمراجعة في أي وقت.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>هل توجد عروض أو خصومات؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        نعم! نقدم خصومات موسمية وعروض خاصة للطلاب الجدد. تابع بريدك الإلكتروني للحصول على أكواد خصم حصرية.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>هل يمكن تحميل الدروس للمشاهدة بدون إنترنت؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        نعم! تطبيق CodeVerse يسمح بتحميل الدروس على هاتفك لمشاهدتها بدون اتصال بالإنترنت.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>كيف يمكنني التواصل مع المدرب؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        يمكنك طرح أسئلتك في قسم الأسئلة والأجوبة الخاص بكل درس. المدرب يرد على الأسئلة عادة خلال 24 ساعة.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>هل توجد متطلبات سابقة قبل التسجيل؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        معظم الدورات مخصصة للمبتدئين ولا تتطلب معرفة سابقة. ستجد في وصف كل دورة المتطلبات الأساسية إن وجدت.
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-question">
+        <span>هل أستطيع العمل أثناء الدراسة؟</span>
+        <span class="faq-toggle">▼</span>
+      </div>
+      <div class="faq-answer">
+        نعم! الدورات مرنة ويمكنك الدراسة بوقتك الخاص. لا توجد مواعيد محددة للحضور.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    function toggleFaq(element) {
+      element.classList.toggle('active');
+    }
+
+    document.getElementById('faqSearch').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const question = item.querySelector('.faq-question span:first-child').textContent.toLowerCase();
+        const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+        if (question.includes(query) || answer.includes(query)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

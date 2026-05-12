@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المدرسون - CodeVerse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .instructors-container {
+      max-width: 1200px;
+      margin: 100px auto 0;
+      padding: 40px 24px;
+    }
+
+    .instructors-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .instructors-header h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .instructors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .instructor-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all var(--transition);
+      text-align: center;
+    }
+
+    .instructor-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+    }
+
+    .instructor-avatar {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+
+    .instructor-info {
+      padding: 25px;
+    }
+
+    .instructor-name {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .instructor-title {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .instructor-bio {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      min-height: 60px;
+    }
+
+    .instructor-stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    .instructor-social {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-size: 1rem;
+    }
+
+    .social-link:hover {
+      background: var(--accent-glow);
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">❤️</a>
+        <a href="cart.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">🛒</a>
+        <a href="profile.html" style="text-decoration: none; color: var(--text-secondary); font-weight: 600; padding: 10px 16px; border-radius: 50px; transition: all var(--transition);">👤</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- INSTRUCTORS SECTION -->
+  <section class="instructors-container">
+    <div class="instructors-header">
+      <h2>👨‍🏫 فريق المدرسين</h2>
+      <p style="color: var(--text-secondary); font-size: 1.05rem; margin-top: 12px;">أفضل المدرسين والخبراء في مجال البرمجة</p>
+    </div>
+
+    <div class="instructors-grid">
+      <div class="instructor-card">
+        <div class="instructor-avatar">👨‍💻</div>
+        <div class="instructor-info">
+          <div class="instructor-name">أحمد علي</div>
+          <div class="instructor-title">خبير Python والذكاء الاصطناعي</div>
+          <div class="instructor-bio">خبرة 10 سنوات في تطوير تطبيقات Python وتدريب أكثر من 5000 طالب بنجاح.</div>
+          <div class="instructor-stats">
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">سنوات خبرة</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5K+</span>
+              <span class="stat-label">طالب</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4.9/5</span>
+              <span class="stat-label">تقييم</span>
+            </div>
+          </div>
+          <div class="instructor-social">
+            <div class="social-link">f</div>
+            <div class="social-link">𝕏</div>
+            <div class="social-link">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructor-card">
+        <div class="instructor-avatar">👩‍💼</div>
+        <div class="instructor-info">
+          <div class="instructor-name">فاطمة محمود</div>
+          <div class="instructor-title">خبيرة تصميم الويب والـ UX</div>
+          <div class="instructor-bio">متخصصة في تصميم الواجهات والتجارب المستخدم. فازت بعدة جوائز عالمية.</div>
+          <div class="instructor-stats">
+            <div class="stat">
+              <span class="stat-number">8+</span>
+              <span class="stat-label">سنوات خبرة</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">3.2K+</span>
+              <span class="stat-label">طالب</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4.95/5</span>
+              <span class="stat-label">تقييم</span>
+            </div>
+          </div>
+          <div class="instructor-social">
+            <div class="social-link">f</div>
+            <div class="social-link">𝕏</div>
+            <div class="social-link">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructor-card">
+        <div class="instructor-avatar">👨‍🔬</div>
+        <div class="instructor-info">
+          <div class="instructor-name">محمد صالح</div>
+          <div class="instructor-title">خبير الأمن السيبراني</div>
+          <div class="instructor-bio">متخصص في أمن المعلومات واختبار الاختراق. عمل مع أكبر الشركات التقنية.</div>
+          <div class="instructor-stats">
+            <div class="stat">
+              <span class="stat-number">12+</span>
+              <span class="stat-label">سنوات خبرة</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">2K+</span>
+              <span class="stat-label">طالب</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4.92/5</span>
+              <span class="stat-label">تقييم</span>
+            </div>
+          </div>
+          <div class="instructor-social">
+            <div class="social-link">f</div>
+            <div class="social-link">𝕏</div>
+            <div class="social-link">in</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructor-card">
+        <div class="instructor-avatar">👩‍🎓</div>
+        <div class="instructor-info">
+          <div class="instructor-name">ليلى إبراهيم</div>
+          <div class="instructor-title">خبيرة React وتطوير الويب</div>
+          <div class="instructor-bio">متخصصة في React و Node.js. طورت عدة تطبيقات ويب كبيرة وناجحة.</div>
+          <div class="instructor-stats">
+            <div class="stat">
+              <span class="stat-number">7+</span>
+              <span class="stat-label">سنوات خبرة</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4K+</span>
+              <span class="stat-label">طالب</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4.88/5</span>
+              <span class="stat-label">تقييم</span>
+            </div>
+          </div>
+          <div class="instructor-social">
+            <div class="social-link">f</div>
+            <div class="social-link">𝕏</div>
+            <div class="social-link">in</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مدونة OSAMA(IT) | مقالات البرمجة والتقنية</title>
+  <meta name="description" content="اكتشف أحدث مقالات البرمجة والتقنية من OSAMA(IT) مع نصائح وشروحات عملية للمطورين." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">OSAMA(IT)</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero" data-translate="الرئيسية">الرئيسية</a></li>
+        <li><a href="courses.html" data-translate="الدورات">الدورات</a></li>
+        <li><a href="features.html" data-translate="المميزات">المميزات</a></li>
+        <li><a href="contact.html" data-translate="تواصل معنا">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3c0 .33.02.65.06.97A7 7 0 0021 12.79z" />
+          </svg>
+        </button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+      <a href="wishlist.html" class="icon-link" aria-label="المفضلة" data-translate="المفضلة">
+        <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+        <span class="sr-only" data-translate="المفضلة">المفضلة</span>
+      </a>
+      <a href="cart.html" class="icon-link" aria-label="السلة" data-translate="السلة">
+        <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 18a2 2 0 100 4 2 2 0 000-4zm10 0a2 2 0 100 4 2 2 0 000-4zm2.83-6.25l-1.6 4.43A2 2 0 0016.3 18H7.28l-.79-4H19a1 1 0 00.83-1.52zM6 6h15v2H6V6z" />
+        </svg>
+        <span class="sr-only" data-translate="السلة">السلة</span>
+      </a>
+      <a href="profile.html" class="icon-link" aria-label="الملف الشخصي" data-translate="الملف الشخصي">
+        <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 12a5 5 0 100-10 5 5 0 000 10zm7 9a7 7 0 00-14 0h14z" />
+        </svg>
+        <span class="sr-only" data-translate="الملف الشخصي">الملف الشخصي</span>
+      </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BLOG SECTION -->
+  <main class="blog-container" aria-labelledby="blog-heading">
+    <div class="blog-header">
+      <h1 id="blog-heading" data-translate="مدونتنا">مدونتنا</h1>
+      <p class="section-subtitle" data-translate="نصائح وموضوعات حصرية في عالم البرمجة والتقنية.">نصائح وموضوعات حصرية في عالم البرمجة والتقنية.</p>
+    </div>
+
+    <div class="blog-toolbar">
+      <input id="blogSearch" class="blog-search" type="search" placeholder="ابحث عن مقال أو فئة أو مؤلف..." data-translate="ابث عن مقال أو فئة أو مؤلف..." aria-label="بحث في المدونة" />
+      <div class="blog-filters" role="tablist" aria-label="فئات المقالات">
+        <button class="blog-filter active" type="button" data-category="all" data-translate="الكل">الكل</button>
+        <button class="blog-filter" type="button" data-category="python">Python</button>
+        <button class="blog-filter" type="button" data-category="react">React</button>
+        <button class="blog-filter" type="button" data-category="security">الأمان</button>
+        <button class="blog-filter" type="button" data-category="design">التصميم</button>
+        <button class="blog-filter" type="button" data-category="data">البيانات</button>
+        <button class="blog-filter" type="button" data-category="devops">DevOps</button>
+      </div>
+    </div>
+
+    <div class="blog-grid">
+      <a class="blog-card" href="post.html?id=python-mistakes" data-id="python-mistakes" data-title="10 أخطاء شائعة يرتكبها المبتدئون في Python" data-category="python" data-author="أحمد علي" aria-label="اقرأ مقال 10 أخطاء شائعة يرتكبها المبتدئون في Python">
+        <div class="blog-image" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1580754848239-ff9a6ab2d3ba?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="blog-content">
+          <span class="blog-category">Python</span>
+          <h2 class="blog-title">10 أخطاء شائعة يرتكبها المبتدئون في Python</h2>
+          <p class="blog-excerpt">تعرف على أكثر الأخطاء التي يقع فيها المبرمجون الجدد وكيفية تجنبها في مشاريع Python العملية.</p>
+          <div class="blog-meta">
+            <div class="blog-author">
+              <div class="author-avatar">أ</div>
+              <span>أحمد علي</span>
+            </div>
+            <span class="read-time">5 دقائق</span>
+          </div>
+          <span class="blog-readmore">اقرأ المزيد</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="post.html?id=react-hooks" data-id="react-hooks" data-title="شرح Hooks في React وكيفية استخدامها" data-category="react" data-author="ليلى إبراهيم" aria-label="اقرأ مقال شرح Hooks في React وكيفية استخدامها">
+        <div class="blog-image" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="blog-content">
+          <span class="blog-category">React</span>
+          <h2 class="blog-title">شرح Hooks في React وكيفية استخدامها</h2>
+          <p class="blog-excerpt">دليل شامل عن React Hooks مع أمثلة عملية يمكنك تطبيقها مباشرة في مشاريع الواجهات التفاعلية.</p>
+          <div class="blog-meta">
+            <div class="blog-author">
+              <div class="author-avatar">ل</div>
+              <span>ليلى إبراهيم</span>
+            </div>
+            <span class="read-time">8 دقائق</span>
+          </div>
+          <span class="blog-readmore">اقرأ المزيد</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="post.html?id=cyber-security" data-id="cyber-security" data-title="أساسيات الأمن السيبراني لكل مطور" data-category="security" data-author="محمد صالح" aria-label="اقرأ مقال أساسيات الأمن السيبراني لكل مطور">
+        <div class="blog-image" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="blog-content">
+          <span class="blog-category">الأمان</span>
+          <h2 class="blog-title">أساسيات الأمن السيبراني لكل مطور</h2>
+          <p class="blog-excerpt">تعلم الممارسات الأمنية الأساسية التي يجب أن يعرفها كل مطور لحماية تطبيقاته وبيانات المستخدمين.</p>
+          <div class="blog-meta">
+            <div class="blog-author">
+              <div class="author-avatar">م</div>
+              <span>محمد صالح</span>
+            </div>
+            <span class="read-time">10 دقائق</span>
+          </div>
+          <span class="blog-readmore">اقرأ المزيد</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="post.html?id=uiux-principles" data-id="uiux-principles" data-title="مبادئ تصميم الواجهات الجميلة والفعالة" data-category="design" data-author="فاطمة محمود" aria-label="اقرأ مقال مبادئ تصميم الواجهات الجميلة والفعالة">
+        <div class="blog-image" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="blog-content">
+          <span class="blog-category">التصميم</span>
+          <h2 class="blog-title">مبادئ تصميم الواجهات الجميلة والفعالة</h2>
+          <p class="blog-excerpt">تعرف على أهم المبادئ في تصميم الواجهات التي تركز على تجربة المستخدم والتفاعل البديهي.</p>
+          <div class="blog-meta">
+            <div class="blog-author">
+              <div class="author-avatar">ف</div>
+              <span>فاطمة محمود</span>
+            </div>
+            <span class="read-time">6 دقائق</span>
+          </div>
+          <span class="blog-readmore">اقرأ المزيد</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="post.html?id=pandas-data" data-id="pandas-data" data-title="مقدمة عن تحليل البيانات باستخدام Pandas" data-category="data" data-author="أحمد علي" aria-label="اقرأ مقال مقدمة عن تحليل البيانات باستخدام Pandas">
+        <div class="blog-image" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1555949963-aa79dcee981d?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="blog-content">
+          <span class="blog-category">البيانات</span>
+          <h2 class="blog-title">مقدمة عن تحليل البيانات باستخدام Pandas</h2>
+          <p class="blog-excerpt">تعلم كيفية معالجة وتحليل البيانات الكبيرة باستخدام مكتبة Pandas لتنظيم النتائج بسرعة.</p>
+          <div class="blog-meta">
+            <div class="blog-author">
+              <div class="author-avatar">أ</div>
+              <span>أحمد علي</span>
+            </div>
+            <span class="read-time">7 دقائق</span>
+          </div>
+          <span class="blog-readmore">اقرأ المزيد</span>
+        </div>
+      </a>
+
+      <a class="blog-card" href="post.html?id=aws-deployment" data-id="aws-deployment" data-title="نشر التطبيقات على AWS خطوة بخطوة" data-category="devops" data-author="محمد صالح" aria-label="اقرأ مقال نشر التطبيقات على AWS خطوة بخطوة">
+        <div class="blog-image" aria-hidden="true" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="blog-content">
+          <span class="blog-category">DevOps</span>
+          <h2 class="blog-title">نشر التطبيقات على AWS خطوة بخطوة</h2>
+          <p class="blog-excerpt">دليل شامل لنشر تطبيقاتك على AWS مع أفضل الممارسات وإعداد البنية السحابية.</p>
+          <div class="blog-meta">
+            <div class="blog-author">
+              <div class="author-avatar">م</div>
+              <span>محمد صالح</span>
+            </div>
+            <span class="read-time">12 دقائق</span>
+          </div>
+          <span class="blog-readmore">اقرأ المزيد</span>
+        </div>
+      </a>
+    </div>
+
+    <div id="blogEmpty" class="blog-empty" hidden>لم يتم العثور على مقالات تطابق البحث. جرّب كلمة أخرى أو فئة مختلفة.</div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('blogSearch');
+      const filterButtons = document.querySelectorAll('.blog-filter');
+      const cards = document.querySelectorAll('.blog-card');
+      const emptyMessage = document.getElementById('blogEmpty');
+
+      const normalize = value => (value || '').trim().toLowerCase();
+
+      const updateCards = () => {
+        const query = normalize(searchInput?.value);
+        const activeCategory = document.querySelector('.blog-filter.active')?.dataset.category || 'all';
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const title = normalize(card.dataset.title);
+          const author = normalize(card.dataset.author);
+          const category = normalize(card.dataset.category);
+          const matchesQuery = !query || title.includes(query) || author.includes(query) || category.includes(query);
+          const matchesCategory = activeCategory === 'all' || category === activeCategory;
+          const show = matchesQuery && matchesCategory;
+
+          card.style.display = show ? '' : 'none';
+          if (show) visibleCount++;
+        });
+
+        if (emptyMessage) {
+          emptyMessage.hidden = visibleCount !== 0;
+        }
+      };
+
+      searchInput?.addEventListener('input', updateCards);
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          updateCards();
+        });
+      });
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">OSAMA(IT)</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 OSAMA(IT). جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

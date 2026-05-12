@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شرح Hooks في React - CodeVerse</title>
+  <meta name="description" content="تعرف على React Hooks وكيفية استخدامها لبناء مكونات تفاعلية أكثر كفاءة وسهولة في الصيانة." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" class="icon-link" aria-label="المفضلة">❤️<span class="sr-only">المفضلة</span></a>
+        <a href="cart.html" class="icon-link" aria-label="السلة">🛒<span class="sr-only">السلة</span></a>
+        <a href="profile.html" class="icon-link" aria-label="الملف الشخصي">👤<span class="sr-only">الملف الشخصي</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="blog-container" aria-labelledby="post-heading">
+    <div class="blog-header">
+      <h1 id="post-heading">شرح Hooks في React وكيفية استخدامها</h1>
+      <p class="section-subtitle">دليل شامل عن React Hooks مع أمثلة عملية يمكنك تطبيقها مباشرة في مشاريع الواجهات التفاعلية.</p>
+      <div class="article-meta">
+        <div class="blog-author">
+          <div class="author-avatar">ل</div>
+          <span>ليلى إبراهيم</span>
+        </div>
+        <span>قراءة: 8 دقائق</span>
+        <span>تاريخ: 20 يونيو 2025</span>
+      </div>
+    </div>
+
+    <article class="article-content">
+      <p>React Hooks غيرت طريقة كتابة المكونات، وجعلت استخدام الحالة والتأثيرات داخل المكونات الوظيفية أمراً مباشراً وسهلاً.</p>
+
+      <h2>ما هي Hooks؟</h2>
+      <p>Hooks هي وظائف في React تسمح لك باستخدام الحالة وميزات أخرى دون الحاجة إلى كتابة مكونات فئة. تم تقديمها في React 16.8 وغيرت الطريقة التي يطور بها المبرمجون التطبيقات.</p>
+
+      <h2>useState Hook</h2>
+      <p>useState هو أساس إدارة الحالة في المكونات الوظيفية. يسمح لك بإضافة حالة محلية إلى مكون بسيط دون الحاجة إلى مكون فئة.</p>
+
+      <h2>useEffect Hook</h2>
+      <p>useEffect يسمح لك بتنفيذ تأثيرات جانبية في المكونات الوظيفية. يمكنك استخدامه للتعامل مع عمليات جلب البيانات والاشتراكات وتحديث DOM يدويًا.</p>
+
+      <h2>Hooks المخصصة</h2>
+      <p>يمكنك إنشاء Hooks مخصصة خاصة بك لإعادة استخدام منطق الحالة بين المكونات. هذا يجعل الكود أكثر قابلية للإعادة والصيانة.</p>
+
+      <ul>
+        <li>استخدم useState لإدارة الحالة البسيطة.</li>
+        <li>استخدم useEffect للعمليات الجانبية.</li>
+        <li>إنشاء Hooks مخصصة لمنطق معقد.</li>
+        <li>تذكر قواعد Hooks عند الاستخدام.</li>
+      </ul>
+
+      <h2>أفضل الممارسات</h2>
+      <p>عند استخدام Hooks، تأكد من اتباع القواعد الأساسية مثل استدعاء Hooks فقط في أعلى المستوى من المكون، وليس داخل حلقات أو شروط.</p>
+    </article>
+
+    <a class="blog-back" href="blog.html">← العودة إلى المدونة</a>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

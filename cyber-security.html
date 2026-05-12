@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أساسيات الأمن السيبراني - CodeVerse</title>
+  <meta name="description" content="اكتشف أفضل ممارسات الأمن السيبراني للمطورين، من التحقق من المدخلات إلى التشفير وحماية البيانات." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">الرئيسية</a></li>
+        <li><a href="courses.html">الدورات</a></li>
+        <li><a href="features.html">المميزات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="تبديل اللغة">EN</button>
+        <a href="wishlist.html" class="icon-link" aria-label="المفضلة">❤️<span class="sr-only">المفضلة</span></a>
+        <a href="cart.html" class="icon-link" aria-label="السلة">🛒<span class="sr-only">السلة</span></a>
+        <a href="profile.html" class="icon-link" aria-label="الملف الشخصي">👤<span class="sr-only">الملف الشخصي</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="blog-container" aria-labelledby="post-heading">
+    <div class="blog-header">
+      <h1 id="post-heading">أساسيات الأمن السيبراني لكل مطور</h1>
+      <p class="section-subtitle">تعلم الممارسات الأمنية الأساسية التي يجب أن يعرفها كل مطور لحماية تطبيقاته وبيانات المستخدمين.</p>
+      <div class="article-meta">
+        <div class="blog-author">
+          <div class="author-avatar">م</div>
+          <span>محمد صالح</span>
+        </div>
+        <span>قراءة: 10 دقائق</span>
+        <span>تاريخ: 28 يوليو 2025</span>
+      </div>
+    </div>
+
+    <article class="article-content">
+      <p>الأمن السيبراني ليس وظيفة فريق واحد فقط، بل هو جزء من عملية تطوير التطبيق بالكامل. كل مطور يجب أن يكون مسؤولاً عن أمان الكود والبيانات.</p>
+
+      <h2>التحقق من المدخلات</h2>
+      <p>تحقق دائماً من البيانات الواردة من المستخدم، ولا تعتمد على القيم التي تصل من المتصفح فقط. استخدم التحقق على الخادم وليس على جهة العميل فقط.</p>
+
+      <h2>التشفير وإدارة المفاتيح</h2>
+      <p>استخدم بروتوكولات HTTPS لتشفير البيانات أثناء النقل. خزن المفاتيح والرموز السرية بشكل آمن خارج الكود المصدري، استخدم متغيرات البيئة.</p>
+
+      <h2>التحديثات الدورية</h2>
+      <p>حدّث المكتبات والإطار الخاص بك بانتظام لتجنب الثغرات المعروفة. استخدم أدوات مثل Snyk و OWASP Dependency-Check لمراقبة الثغرات.</p>
+
+      <h2>معالجة الأخطاء بحذر</h2>
+      <p>لا تكشف معلومات حساسة في رسائل الأخطاء. قدم رسائل خطأ عامة للمستخدم، وسجل التفاصيل الكاملة في السجلات الخاصة بك.</p>
+
+      <ul>
+        <li>تحقق من جميع المدخلات والمخرجات.</li>
+        <li>استخدم HTTPS في جميع الاتصالات.</li>
+        <li>حدّث المكتبات والأدوات بانتظام.</li>
+        <li>طبّق التحكم في الوصول المناسب.</li>
+        <li>سجّل وراقب الأنشطة المريبة.</li>
+      </ul>
+
+      <h2>الخلاصة</h2>
+      <p>الأمن ليس فيتشر يُضاف في النهاية، بل هو جزء من عملية التطوير من البداية. اتبع أفضل الممارسات وابقَ محدّثاً على أحدث الهجمات والثغرات.</p>
+    </article>
+
+    <a class="blog-back" href="blog.html">← العودة إلى المدونة</a>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">CodeVerse</span>
+      </div>
+      <p class="footer-tagline">نبني مبرمجي المستقبل — سطراً واحداً في كل مرة.</p>
+      <div class="footer-links">
+        <a href="faq.html">الأسئلة الشائعة</a>
+        <a href="blog.html">المدونة</a>
+        <a href="instructors.html">المدرسون</a>
+        <a href="certificates.html">شهاداتي</a>
+      </div>
+      <p class="footer-copy">© 2025 CodeVerse. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
